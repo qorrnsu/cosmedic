@@ -4,7 +4,9 @@ from subprocess import Popen, PIPE, STDOUT
 Do a search on cosdna, return the result page content.
 """
 def get_search_content(keyword):
-    cmd = "./lib/get-cors https://www.cosdna.com/eng/product.php?q=" + keyword
+    sort_key = "date"
+    cmd = "./lib/get-cors https://www.cosdna.com/eng/product.php\?q\=" + keyword + "\&sort\=" + sort_key
+
     return run_cors_proxy(cmd)
 
 """"
