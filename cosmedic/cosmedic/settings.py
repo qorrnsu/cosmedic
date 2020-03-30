@@ -25,7 +25,7 @@ SECRET_KEY = '(el1fvx#j5q@nj-2865riq(!5yxi@dd^ii@nf#7k^@p5)8)1by'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -73,12 +73,8 @@ WSGI_APPLICATION = 'cosmedic.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# No database needed, hence removed sql locally
+DATABASES = {}
 
 
 # Password validation
